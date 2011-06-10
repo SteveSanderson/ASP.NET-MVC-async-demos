@@ -1,0 +1,27 @@
+﻿@{ ViewBag.Title = "Index"; }
+
+<h2>Chat</h2>
+
+<ul id="messages"></ul>
+
+@using (Ajax.BeginForm("PostMessage", new AjaxOptions { OnBegin = "clearBox" }))
+{
+    <p>
+        Say: @Html.TextBox("message")
+        <input type="submit" />
+    </p>
+}
+
+<script type="text/javascript">
+    function clearBox() {
+        $("#message").val("").focus();
+    }
+
+    function getNextMessage() {
+        $.post("@Url.Action("GetNextMessage")", function(message) {
+            $("<li>").text(message).appendTo("#messages");
+            getNextMessage();
+        });
+    }
+    setTimeout(getNextMessage, 0);
+</script>

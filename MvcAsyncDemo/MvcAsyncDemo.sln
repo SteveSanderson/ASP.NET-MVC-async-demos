@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcAsyncDemo", "MvcAsyncDemo\MvcAsyncDemo.csproj", "{FA2174F7-B548-4F89-B361-4FD9840E4084}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightInfoWebService", "FlightInfoWebService\FlightInfoWebService.csproj", "{998BA5FD-B777-4249-91F1-DB4DD54382CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebService", "WebService", "{7918CEF4-1676-4664-B3CF-065393BF134D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA2174F7-B548-4F89-B361-4FD9840E4084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA2174F7-B548-4F89-B361-4FD9840E4084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA2174F7-B548-4F89-B361-4FD9840E4084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA2174F7-B548-4F89-B361-4FD9840E4084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{998BA5FD-B777-4249-91F1-DB4DD54382CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{998BA5FD-B777-4249-91F1-DB4DD54382CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{998BA5FD-B777-4249-91F1-DB4DD54382CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{998BA5FD-B777-4249-91F1-DB4DD54382CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{998BA5FD-B777-4249-91F1-DB4DD54382CD} = {7918CEF4-1676-4664-B3CF-065393BF134D}
+	EndGlobalSection
+EndGlobal

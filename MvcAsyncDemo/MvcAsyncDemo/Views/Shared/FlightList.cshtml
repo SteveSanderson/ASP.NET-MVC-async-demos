@@ -1,0 +1,19 @@
+﻿@model IEnumerable<MvcAsyncDemo.Models.Flight>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@foreach(var flight in Model) {
+    <div class="flight clear">
+        <div class="price">@flight.Price.ToString("c")</div>
+        <div class="cities">
+            <span class="city">@flight.FromCity</span>
+            <br />to
+            <span class="city">@flight.ToCity</span>
+        </div>
+    </div>
+}
+<div class="clear">
+    <p>Total: @Model.Count() cheap flights today</p>
+</div>

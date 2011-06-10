@@ -1,0 +1,36 @@
+﻿@model ChatAndVote.Models.Question
+@{ ViewBag.Title = "Voting"; }
+<script src="/Scripts/ko-1.3ctp.js" type="text/javascript"></script>
+<script src="/Scripts/knockout.mapping.js" type="text/javascript"></script>
+
+<h3>Please vote: <span data-bind="text: question.QuestionText"></span></h3>
+
+<ul data-bind="foreach: question.Answers">
+    <li>
+        <span class="answer" data-bind="text: AnswerText"></span>
+        (<span data-bind="text: NumVotes"></span> votes)
+        <button data-bind="click: function() { viewModel.vote($data) }">Vote</button>
+        <div class="voteBar" data-bind="style: { width: NumVotes() + 'em' }"></div>
+    </li>
+</ul>
+
+
+<script type="text/javascript">
+    var serverData = @Html.Raw(new JavaScriptSerializer().Serialize(Model));
+    var viewModel = {
+        question: ko.mapping.fromJS(serverData),
+
+        vote: function(answer) {
+            answer.NumVotes(answer.NumVotes() + 1);
+            $.post("@Url.Action("SubmitVote")", { answerId: answer.AnswerId });
+        }
+    };
+    ko.applyBindings(viewModel);
+
+    setTimeout(function getUpdatedState() {
+        $.post("@Url.Action("GetUpdatedState")", function (data) {
+            ko.mapping.updateFromJS(viewModel.question, data);
+            getUpdatedState();
+        });
+    }, 0);
+</script>

@@ -1,0 +1,21 @@
+﻿@model IEnumerable<TapExamples.Models.Headline>
+@{ ViewBag.Title = "Results"; }
+
+<h2>Results</h2>
+
+<ul>
+    @foreach (var item in Model) {
+        <li><b>@item.Source.Name</b> - @item.HeadlineText</li>
+    }
+</ul>
+
+
+@{ var errors = (IEnumerable<Exception>)ViewBag.AllErrors; }
+@if (errors != null) {
+    <h2>Errors: @errors.Count()</h2>
+    <ul>
+        @foreach (var item in errors) {
+            <li>@item.ToString()</li>
+        }
+    </ul>
+}

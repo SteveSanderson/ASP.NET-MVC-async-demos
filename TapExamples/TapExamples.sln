@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TapExamples", "TapExamples\TapExamples.csproj", "{2DC85A71-F57D-4CC4-AF8D-9983095918DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeWebServices", "FakeWebServices\FakeWebServices.csproj", "{A83D32D5-687A-4687-AE4B-3AE0C2736881}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebServices", "WebServices", "{0E533A94-F852-4597-8351-E89B11CAF792}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DC85A71-F57D-4CC4-AF8D-9983095918DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DC85A71-F57D-4CC4-AF8D-9983095918DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DC85A71-F57D-4CC4-AF8D-9983095918DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DC85A71-F57D-4CC4-AF8D-9983095918DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A83D32D5-687A-4687-AE4B-3AE0C2736881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A83D32D5-687A-4687-AE4B-3AE0C2736881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A83D32D5-687A-4687-AE4B-3AE0C2736881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A83D32D5-687A-4687-AE4B-3AE0C2736881}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A83D32D5-687A-4687-AE4B-3AE0C2736881} = {0E533A94-F852-4597-8351-E89B11CAF792}
+	EndGlobalSection
+EndGlobal
